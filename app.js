@@ -1,1 +1,1 @@
-import "./app.js"
+import "./src/moduls/materias-primas.js"
