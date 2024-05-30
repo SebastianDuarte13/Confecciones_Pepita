@@ -1,1 +1,1 @@
-import "./src/moduls/materias-primas.js"
+import "./src/moduls/materias-primas.js";
