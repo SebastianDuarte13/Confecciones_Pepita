@@ -129,3 +129,19 @@ export class MyElement extends LitElement {
 }
 
 window.customElements.define('my-element', MyElement)
+
+
+
+
+function createBubbles() {
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+  bubble.style.left = `${Math.random() * window.innerWidth}px`;
+  document.body.appendChild(bubble);
+
+  setTimeout(() => {
+      bubble.remove();
+  }, 5000);
+}
+
+setInterval(createBubbles, 1000);

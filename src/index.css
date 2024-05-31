@@ -5,13 +5,16 @@
 }
 
 body{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 header {
-  font-size: 20px;
+  font-size: 25px;
   margin: 22px;
-  color:#d62976;
-  background-color: linear-gradient(to right, #ff8a73, #ff6bad);
+  color:#ff0073;
+  background-color: linear-gradient(to right, #f77c63, #ff6bad);
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
 }
 #costosButton, #loginButton, #eficienciaButton, #confeccionesButton {
   padding: 10px 20px;
@@ -20,15 +23,15 @@ header {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  color: rgb(185, 101, 101);
+  color: rgb(255, 255, 255);
   background: linear-gradient(to right, #ff8a73, #ff6bad);
   margin: 10px;
 
   width: 165px;
   height: 62px;
   cursor: pointer;
-  color: #fff;
-  font-size: 17px;
+  color: #ffffff;
+  font-size: 22px;
   border-radius: 1rem;
   border: none;
   position: relative;
@@ -62,8 +65,7 @@ main {
   color: var(--color-black);
 }
 .aside {
-  border-radius: 50px;
-  background-color: var(--color-white);
+  background-color: rgb(255, 195, 250);
   display: grid;
   grid-area: aside;
   display: flex;
@@ -220,7 +222,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 25px;
+  padding: 25px 100%;
   gap: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
@@ -288,19 +290,33 @@ img {
 
 
 .Bienvenida {
+  position: relative;
+  top: -60px;
   color: black;
   font-size: 20px;
   z-index: 3;
   width: 50%;
   height: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%; 
+  margin: 0 auto;
+}
+
+.Bienvenida img {
+  z-index: 3;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  top: -40px;
 }
 
 
 
 .card {
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: 198px;
   color: #fff;
   transition: 0.5s;
   cursor: pointer;
@@ -311,9 +327,8 @@ img {
 }
 
 .card::before {
-  content: '';
+
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -322,12 +337,10 @@ img {
 }
 
 .card::after {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background: linear-gradient(45deg, #ffbc00, #ff0058);
   filter: blur(30px);
 }
@@ -343,15 +356,7 @@ img {
   border-radius: 1em;
 }
 
-.card span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
+
 
 .card .content {
   position: relative;
@@ -403,59 +408,99 @@ button:active {
 
 
 /**registros **/
-.TarjetaR {
-  width: 190px;
-  height: 254px;
-  background: rgb(103, 225, 255);
-  transition: all 0.4s;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 900;
+
+.card {
+  position: relative;
+  width: 200px;
+  padding: 80px;
   margin: 40px;
-  z-index: 1;
-}
-
-.TarjetaR:hover {
-  border-radius: 15px;
+  color: #fff;
+  transition: 0.5s;
   cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-  background: rgb(103, 151, 255);
 }
 
-.first-content {
-  height: 100%;
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card::before {
+  content: '';
   width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  border-radius: 15px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  border-radius: 1.2em;
+  border-radius: 20px;
+
 }
 
-.TarjetaR:hover .first-content {
-  height: 0px;
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  filter: blur(30px);
+  border-radius: 20px;
+
+}
+
+.card span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: rgba(148, 55, 55, 0.6);
+  z-index: 2;
+  border-radius: 20px;
+  border-radius: 1em;
+}
+
+.card span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 123, 83, 0.336);
+}
+
+.borrarLetra {
   opacity: 0;
 }
 
-.second-content {
-  height: 0%;
+
+/** Burbujas **/
+body, html {
+  overflow: hidden;
+  height: 100%;
   width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  transition: all 0.4s;
-  font-size: 0px;
-  transform: rotate(90deg) scale(-1);
 }
 
-.card:hover .second-content {
-  opacity: 1;
-  height: 100%;
-  font-size: 1.8rem;
-  transform: rotate(0deg);
+.bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  animation: float 10s alternate ;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(-1000px);
+  }
+  50% {
+      transform: translateY(-50px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
