@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+import { LitElement, css, html } from 'lit'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./materias-primas.js";
+import "./eficiencia.js"
+
+export class MyElement extends LitElement {
+  static get properties() {
+    return {
+
+    }
+  }
+
+  constructor() {
+    super()
+  
+  }
+
+  render() {
+    return html`
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,6 +67,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            console.log("dasdadasdadasd")
             const openAddModalBtn = document.getElementById('openAddModalBtn');
             const addModal = new bootstrap.Modal(document.getElementById('addModal'));
             openAddModalBtn.addEventListener('click', () => {
@@ -59,6 +79,7 @@
             const openEditModalBtn = document.getElementById('openEditModalBtn');
             const editModal = new bootstrap.Modal(document.getElementById('editModal'));
             openEditModalBtn.addEventListener('click', async () => {
+                console.log("dasdadasdadasd")
                 const editMateriaPrima = document.querySelector('#editModal materia-prima');
                 await editMateriaPrima.handleEdit();
                 if (editMateriaPrima.editMode) {
@@ -75,4 +96,20 @@
     </script>
 </body>
 </html>
+    
+    `
+  }
 
+  _onClick() {
+    this.count++
+  }
+
+  static get styles() {
+    return css`
+    
+  
+    `
+  }
+}
+
+window.customElements.define('mi-element', MyElement)

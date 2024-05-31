@@ -164,7 +164,7 @@ export class MateriaPrima extends LitElement {
     render() {
         return html`
             <div class="container">
-                <h2>${this.editMode ? 'Editar' : 'Ingresar'} Materia Prima</h2>
+                <h2>${this.editMode ? 'Editar' : 'Ingresar'}</h2>
                 <form @submit="${this.handleSubmit}">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
