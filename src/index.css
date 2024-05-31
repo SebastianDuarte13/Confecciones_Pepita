@@ -7,7 +7,34 @@
 body{
   background-color: white;
 }
+header {
+  font-size: 20px;
+  margin: 22px;
+  color:#d62976;
+  background-color: linear-gradient(to right, #ff8a73, #ff6bad);
+}
+#costosButton, #loginButton, #eficienciaButton, #confeccionesButton {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(185, 101, 101);
+  background: linear-gradient(to right, #ff8a73, #ff6bad);
+  margin: 10px;
 
+  width: 165px;
+  height: 62px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: linear-gradient(to right, #ff8a73, #ff6bad);
+  transition: 0.1s;
+}
 
 main {
   width: 100%;
@@ -47,14 +74,6 @@ main {
 }
 .li1 {
   font-weight: bold;
-}
-.aside ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 40%;
-  align-items: center;
 }
 
 .aside__options {
@@ -105,6 +124,7 @@ main {
   gap: 5px;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 .aside__options li a:hover {
   font-weight: bold;
@@ -267,6 +287,13 @@ img {
 }
 
 
+.Bienvenida {
+  color: black;
+  font-size: 20px;
+  z-index: 3;
+  width: 50%;
+  height: 50%;
+}
 
 
 
@@ -372,4 +399,63 @@ button:active {
   transform: scale(0.9) rotate(3deg);
   background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
   transition: 0.5s;
+}
+
+
+/**registros **/
+.TarjetaR {
+  width: 190px;
+  height: 254px;
+  background: rgb(103, 225, 255);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+  margin: 40px;
+  z-index: 1;
+}
+
+.TarjetaR:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background: rgb(103, 151, 255);
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.TarjetaR:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
 }
