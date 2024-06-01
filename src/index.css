@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.linea{
+  text-decoration: none;
+  color: black;
+}
+
 body{
   background-color: rgb(255, 255, 255);
 }
@@ -168,11 +173,6 @@ main {
 .window h1 {
   font-size: 2.3em;
   color: var(--color-black);
-}
-
-img {
-  width: 100%;
-  height: 100%;
 }
 
 .container{
@@ -490,7 +490,17 @@ body, html {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  animation: float 10s alternate ;
+  animation: float 10s infinite alternate;
+}
+
+.arreglos{
+  display: flex;
+  flex-direction: row;
+}
+
+.arreglo2{
+  display: flex;
+  flex-direction: row;
 }
 
 @keyframes float {
@@ -504,3 +514,71 @@ body, html {
       transform: translateY(0);
   }
 }
+
+
+@media screen and (max-width: 995px) {
+  .Bienvenida{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .Bienvenida img {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+  }
+  
+  h1{
+    font-size: 40px;
+  }
+
+  .card{
+    width: 20px;
+  }
+
+  header {
+    font-size: 15px;
+    margin: 2px;
+    color:#ff0073;
+    background-color: linear-gradient(to right, #f77c63, #ff6bad);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .cards{
+   padding: 25;
+  }
+  
+  .arreglos{
+    flex-direction: column;
+  }
+  
+  .arreglo3{
+    position: relative;
+    left: 25%;
+  }
+}                                                  
+@media screen and (max-width: 500px) {
+  
+  .Bienvenida{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  header {
+    font-size: 30px;
+    margin: 20px;
+    color:#ff0073;
+    background-color: linear-gradient(to right, #f77c63, #ff6bad);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+}                                                  

@@ -114,7 +114,6 @@ export class EficienciaElement extends LitElement {
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    <button @click="${this.mostrarRegistros}" class="btn btn-primary">Mostrar Registros</button>
                 </form>
             </div>
         `;
