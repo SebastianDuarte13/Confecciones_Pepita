@@ -11,9 +11,7 @@ header {
   font-size: 25px;
   margin: 22px;
   color:#ff0073;
-  background-color: linear-gradient(to right, #f77c63, #ff6bad);
   font-weight: 400;
-  font-style: normal;
   font-weight: 200;
 }
 #costosButton, #loginButton, #eficienciaButton, #confeccionesButton {
@@ -47,22 +45,12 @@ main {
   grid-template-rows: 1fr 4fr;
   grid-template-areas: 
   "header window"
-  "aside window"
-  ;
+  "aside window";
   overflow: hidden;
 }
 
-.header {
-  background-color: var(--color-white);
-  display: grid;
-  grid-area: header;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .header h1 {
   font-size: 2.2em;
-  color: var(--color-black);
 }
 .aside {
   background-color: rgb(255, 195, 250);
