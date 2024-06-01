@@ -29,6 +29,19 @@ export class EficienciaElement extends LitElement {
         this.eficienciaoperativa = 0;
     }
 
+    async mostrarRegistros() {
+        try {
+            const response = await fetch('https://6658c1ab5c3617052649bc5a.mockapi.io/eficiencia');
+            if (!response.ok) {
+                throw new Error('Error obteniendo los datos');
+            }
+            const data = await response.json();
+            console.log(data); // aquí puedes hacer lo que quieras con los datos, como mostrarlos en una tabla
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
     async saveToJson(data) {
         const response = await fetch('https://6658c1ab5c3617052649bc5a.mockapi.io/eficiencia', {
             method: 'POST',
@@ -101,6 +114,7 @@ export class EficienciaElement extends LitElement {
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button @click="${this.mostrarRegistros}" class="btn btn-primary">Mostrar Registros</button>
                 </form>
             </div>
         `;
@@ -117,5 +131,6 @@ export class EficienciaElement extends LitElement {
         `;
     }
 }
+
 
 window.customElements.define('eficiencia-element', EficienciaElement);
