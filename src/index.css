@@ -11,9 +11,6 @@
   color: black;
 }
 
-body{
-  background-color: rgb(255, 255, 255);
-}
 header {
   font-size: 25px;
   margin: 22px;
@@ -72,7 +69,7 @@ header {
    margin: 40px;
   width: 180px;
   height: 300px;
-  background-color: rgb(132, 81, 180);
+  background-color: rgb(152, 94, 206);
   font-size: 30px;
   border: 4px solid black;
   color: black ;
@@ -175,7 +172,7 @@ main {
 .products__window {
   display: grid;
   grid-area: window;
-  background-color: #a697c9
+  background-color: #000000
   ;
   width: 100%;
   height: 100%;
@@ -183,6 +180,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .window {
   width: 100%;
@@ -316,7 +314,7 @@ main {
 
 .Bienvenida {
   position: relative;
-  top: -60px;
+  top: -100px;
   color: black;
   font-size: 20px;
   z-index: 3;
@@ -331,10 +329,13 @@ main {
 
 .Bienvenida img {
   z-index: 3;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   position: relative;
-  top: -40px;
+  top: 10px;
+  /*filter: invert(1);*/
+  background-color: white;
+  border-radius: 100%;
 }
 
 
@@ -507,6 +508,7 @@ body, html {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  z-index: 90;
 }
 
 .bubble {
@@ -516,6 +518,7 @@ body, html {
   height: 180px;
   border-radius: 50%;
   animation: float 10s infinite alternate;
+  z-index: 90;
 }
 
 .arreglos{
@@ -631,4 +634,17 @@ body, html {
   border: 4px solid black;
   color: black ;
   border-radius: 40px;
+}
+
+.Bienvenida h1 {
+  color: white;
+  font-size: 40px;
+}
+.Bienvenida p {
+  color: white;
+  font-size: 20px;
+  
+}
+.modal-backdrop.fade.show {
+  all: unset;
 }

@@ -30,7 +30,7 @@ export class table extends LitElement {
 
     render() {
         return html`
-            <table class="table table-dark table-borderless">
+            <table class="table-table-dark-table-borderless">
                 <thead>
                     <tr>
                         <th>Nombre del lote</th>
@@ -59,7 +59,25 @@ export class table extends LitElement {
 
     static get styles() {
         return css`
-        
+            .table-table-dark-table-borderless {
+                
+                background-color: black; /* Color de fondo */
+                color: black; /* Color del texto */
+                padding: 10px; /* Espaciado interno */
+                border: 1px solid black; /* Borde */
+                border-radius: 20px; /* Curvatura del borde */
+                border-collapse: separate;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+               
+            }
+            td, th {
+                border: 1px solid #ccc;
+                padding: 8px;
+                background-color: white;
+                
+            }
     ` }
 }
 window.customElements.define('table-inventario', table);

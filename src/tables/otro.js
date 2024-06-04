@@ -59,12 +59,26 @@ export class otro extends LitElement {
 
     static get styles() {
         return css`
-            .table-table-dark-table-borderless {
-                background-color: #f2f2f2; /* Color de fondo */
-                color: blue; /* Color del texto */
-                padding: 8px; /* Espaciado interno */
-                border: 1px solid black; /* Borde */
-            }
+        .table-table-dark-table-borderless {
+            
+            z-index:4;
+            background-color: black; /* Color de fondo */
+            color: black; /* Color del texto */
+            padding: 10px; /* Espaciado interno */
+            border: 1px solid black; /* Borde */
+            border-radius: 20px; /* Curvatura del borde */
+            border-collapse: separate;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            z-index:4;
+        }
+        td, th {
+            border: 1px solid #ccc;
+            padding: 8px;
+            background-color: white;
+            z-index:4;
+        }
         `;
     }
 }
