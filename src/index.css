@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  color: black;
 }
 
 .linea{
@@ -40,6 +42,41 @@ header {
   position: relative;
   background: linear-gradient(to right, #ff8a73, #ff6bad);
   transition: 0.1s;
+}
+
+.btn-btn-primary,
+.btn-btn-secondary,
+.btn-btn-danger {
+  margin: 40px;
+  width: 180px;
+  height: 300px;
+  background-color: rgb(132, 81, 180);
+  font-size: 30px;
+  border: 4px solid black;
+  color: black ;
+  border-radius: 40px;
+}
+
+.btn-btn-primary-mr-3 {
+  margin: 40px;
+  width: 180px;
+  height: 300px;
+  background-color: rgb(132, 81, 180);
+  font-size: 30px;
+  border: 4px solid black;
+  color: black ;
+  border-radius: 40px;
+}
+
+.btn-btn-primary {
+   margin: 40px;
+  width: 180px;
+  height: 300px;
+  background-color: rgb(132, 81, 180);
+  font-size: 30px;
+  border: 4px solid black;
+  color: black ;
+  border-radius: 40px;
 }
 
 main {

@@ -5,14 +5,14 @@ import "../moduls/lote"
 export class table extends LitElement {
     static get properties() {
         return {
-            data: { type: Array } // Propiedad para almacenar los datos de la API
+            data: { type: Array }
         };
     }
 
     constructor() {
         super();
-        this.data = []; // Inicializa la propiedad de datos como un array vacío
-        this.fetchData(); // Llama a la función para obtener los datos de la API cuando se crea la instancia de la clase
+        this.data = [];
+        this.fetchData();
     }
 
     async fetchData() {
@@ -22,7 +22,7 @@ export class table extends LitElement {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            this.data = data; // Asigna los datos obtenidos de la API a la propiedad 'data'
+            this.data = data; 
         } catch (error) {
             console.error('There was a problem fetching the data:', error);
         }
@@ -59,13 +59,6 @@ export class table extends LitElement {
 
     static get styles() {
         return css`
-            /* Agrega estilos personalizados aquí si es necesario */
-        `;
-    }
-}
-
-window.customElements.define('table-inventario', table);
-
-
-
   
+    ` }
+}
