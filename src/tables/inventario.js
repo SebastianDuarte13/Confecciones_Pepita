@@ -59,6 +59,6 @@ export class table extends LitElement {
 
     static get styles() {
         return css`
-  
+        
     ` }
 }

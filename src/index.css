@@ -606,4 +606,29 @@ body, html {
     font-style: normal;
     text-align: center;
   }
-}                                                  
+}            
+
+.modal-content {
+  position: absolute;
+  right: -180px;
+  top: 200px;
+  background-color: #b7c8fd;
+}
+
+.modal-dialog {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+}
+
+.btn-btn-primary {
+  margin: 40px;
+  width: 180px;
+  height: 300px;
+  background-color: rgb(132, 81, 180);
+  font-size: 30px;
+  border: 4px solid black;
+  color: black ;
+  border-radius: 40px;
+}

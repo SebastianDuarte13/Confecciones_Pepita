@@ -30,7 +30,7 @@ export class otro extends LitElement {
 
     render() {
         return html`
-            <table class="table table-dark table-borderless">
+            <table class="table-table-dark-table-borderless">
                 <thead>
                     <tr>
                         <th>Nombre del producto</th>
@@ -59,7 +59,12 @@ export class otro extends LitElement {
 
     static get styles() {
         return css`
-            /* Agrega estilos personalizados aquí si es necesario */
+            .table-table-dark-table-borderless {
+                background-color: #f2f2f2; /* Color de fondo */
+                color: blue; /* Color del texto */
+                padding: 8px; /* Espaciado interno */
+                border: 1px solid black; /* Borde */
+            }
         `;
     }
 }
