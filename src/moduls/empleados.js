@@ -10,6 +10,7 @@ export class empleados extends LitElement {
         horastrabajadas: { type: Number },
         beneficiosprest: { type: Number },
         otroscostos: { type: Number },
+        total: { type: Number } // Cambiado a 'total' en lugar de 'totalCostos'
     };
 
     constructor() {
@@ -19,6 +20,7 @@ export class empleados extends LitElement {
         this.horastrabajadas = 0;
         this.beneficiosprest = 0;
         this.otroscostos = 0;
+        this.total = 0; // Cambiado a 'total' en lugar de 'totalCostos'
     }
 
     async saveToJson(data) {
@@ -45,9 +47,22 @@ export class empleados extends LitElement {
 
         const formData = new FormData(event.target);
         const data = {};
+        let total = 0;
+
         formData.forEach((value, key) => {
+            // Suma los valores ingresados
+            if (key !== 'total') {
+                total += Number(value);
+            }
             data[key] = value;
         });
+
+        // Calcula el total usando la fórmula especificada
+        total = (this.salariohora * this.horastrabajadas) - this.beneficiosprest - this.otroscostos;
+
+        // Agrega el total al objeto de datos
+        data['total'] = total;
+
         this.saveToJson(data);
     }
 
@@ -80,9 +95,8 @@ export class empleados extends LitElement {
                         <label for="otroscostos">Otros Costos</label>
                         <input id="otroscostos" name="otroscostos" type="number" class="form-control" .value="${this.otroscostos}" @input="${this.handleInputChange}" required>
                     </div>
-                    
+                    <!-- Eliminado el campo para mostrar el total -->
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    
                 </form>
             </div>
         `;
