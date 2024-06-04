@@ -5,7 +5,9 @@
   text-decoration: none;
   color: black;
 }
-
+body{
+  position: relative;
+}
 .linea{
   text-decoration: none;
   color: black;
@@ -92,26 +94,36 @@ main {
   font-size: 2.2em;
 }
 .aside {
+  width: 100%;
+
   background-color: rgb(255, 195, 250);
-  display: grid;
-  grid-area: aside;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   justify-content: space-around;
 }
 .li1 {
   font-weight: bold;
 }
-
+.aside ul{
+  display: flex;
+  width: 100%;
+margin-left: 8rem;
+ /* border:1px solid red; */
+}
 .aside__options {
   height: 50%;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
+}
+.aside__options li a{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .aside__shopping_cart {
@@ -153,10 +165,13 @@ main {
   gap: 5px;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+}
+.aside__options .li1{
+  font-weight: normal;
 }
 .aside__options li a:hover {
   font-weight: bold;
+  scale: 1.1;
 }
 .aside__shopping_cart li a:hover {
   font-weight: bold;
@@ -260,26 +275,34 @@ main {
   justify-content: center;
   overflow: hidden;
   transition-duration: .3s;
+  border-radius: 2rem;
 }
 /* instagram*/
 .containerOne:hover {
   background-color: #d62976;
   transition-duration: .3s;
+  scale: 1.2;
 }
 /* twitter*/
 .containerTwo:hover {
   background-color: #00acee;
   transition-duration: .3s;
+  scale: 1.2;
+
 }
 /* linkdin*/
 .containerThree:hover {
   background-color: #0072b1;
   transition-duration: .3s;
+  scale: 1.2;
+
 }
 /* Whatsapp*/
 .containerFour:hover {
   background-color: #128C7E;
   transition-duration: .3s;
+  scale: 1.2;
+
 }
 
 .socialContainer:active {
@@ -346,6 +369,8 @@ main {
   color: #fff;
   transition: 0.5s;
   cursor: pointer;
+  border: 3px solid yellow;
+  border-radius: 20px;
 }
 
 .card:hover {
@@ -369,6 +394,8 @@ main {
   width: 100%;
   background: linear-gradient(45deg, #ffbc00, #ff0058);
   filter: blur(30px);
+  border-radius: 1.2em;
+
 }
 
 .card span {
@@ -395,6 +422,7 @@ main {
   justify-content: center;
   font-weight: 800;
   font-size: 1.5em;
+  
 }
 
 
@@ -531,7 +559,7 @@ body, html {
   flex-direction: row;
 }
 
-@keyframes float {
+/* @keyframes float {
   0% {
       transform: translateY(-1000px);
   }
@@ -541,8 +569,18 @@ body, html {
   100% {
       transform: translateY(0);
   }
+} */
+@keyframes float {
+  0% {
+      transform: translateY(0) translateX(0);
+  }
+  50% {
+      transform: translateY(-1000px) translateX(400px);
+  }
+  100% {
+      transform: translateY(700px) translateX(300px);
+  }
 }
-
 
 @media screen and (max-width: 995px) {
   .Bienvenida{
