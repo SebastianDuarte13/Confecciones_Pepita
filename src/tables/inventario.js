@@ -62,3 +62,4 @@ export class table extends LitElement {
         
     ` }
 }
+window.customElements.define('table-inventario', table);
