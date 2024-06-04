@@ -89,57 +89,58 @@
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/img/confecciones.jpg'); background-size: cover; background-position: center; opacity: 0.3;">
       </div>
       <div class="arreglos">
-        
         <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite + Lit</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/index.css">
-    <script type="module" src="/app.js"></script>
-    <!-- Agrega el script de Bootstrap desde un CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+
 <body>
+<!-- Botón para mostrar el modal del formulario de Lote -->
+<button id="btnMostrarLoteModal" class="btn btn-primary mr-3" > Lote</button>
+    
+<!-- Botón para mostrar el modal del formulario de Costos Indirectos -->
+<button id="btnMostrarCostosIndirectosModal" class="btn btn-primary" style="display: none;" > Costos Indirectos</button>
 
-    <button id="openEficienciaModalBtn" class="btn btn-primary">Agregar Eficiencia</button>
-
-    <!-- Modal para agregar eficiencia -->
-    <div class="modal fade" id="addEficienciaModal" tabindex="-1" aria-labelledby="addEficienciaModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addEficienciaModalLabel"> Eficiencia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <eficiencia-element></eficiencia-element>
-                </div>
+<!-- Modal para mostrar los formularios de los web components -->
+<div class="modal fade" id="webComponentModal" tabindex="-1" role="dialog" aria-labelledby="webComponentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="webComponentModalLabel">Formulario</h5>
             </div>
+            <div class="modal-body" id="webComponentContainer"></div>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const openEficienciaModalBtn = document.getElementById('openEficienciaModalBtn');
-            const addEficienciaModal = new bootstrap.Modal(document.getElementById('addEficienciaModal'));
-            openEficienciaModalBtn.addEventListener('click', () => {
-                addEficienciaModal.show();
-            });
-        });
-    </script>
+<!-- Importa los scripts de LitElement y los web components -->
+<script type="module">
+    // Importa las clases de los web components
+
+    // Función para mostrar el formulario del web component 'lote' en el modal
+    function showLoteModal() {
+        const loteForm = document.createElement('lote-element');
+        document.getElementById('webComponentContainer').innerHTML = '';
+        document.getElementById('webComponentContainer').appendChild(loteForm);
+        $('#webComponentModal').modal('show'); // Muestra el modal
+    }
+
+    // Función para mostrar el formulario del web component 'costos-indirectos' en el modal
+    function showCostosIndirectosModal() {
+        const costosForm = document.createElement('costos-indirectos');
+        document.getElementById('webComponentContainer').innerHTML = '';
+        document.getElementById('webComponentContainer').appendChild(costosForm);
+        $('#webComponentModal').modal('show'); // Muestra el modal
+    }
+
+    // Agrega eventos a los botones para mostrar los modales con los web components
+    document.getElementById('btnMostrarLoteModal').addEventListener('click', showLoteModal);
+    document.getElementById('btnMostrarCostosIndirectosModal').addEventListener('click', showCostosIndirectosModal);
+</script>
+
+<!-- Importa los scripts de jQuery y Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
 
-      </div>
-
-    </section>
-
-
-  </main>
-
-</body>
-
-</html>
